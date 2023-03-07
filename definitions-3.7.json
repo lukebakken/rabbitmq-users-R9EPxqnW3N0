@@ -1,0 +1,54 @@
+{
+  "rabbit_version": "3.7.15",
+  "users": [
+    {
+      "name": "guest",
+      "password_hash": "5QDjbE571gSfnisb82Vo/h/3UMI29uxlCZP8ig0t3HrvV5hp",
+      "hashing_algorithm": "rabbit_password_hashing_sha256",
+      "tags": "administrator"
+    }
+  ],
+  "vhosts": [
+    {
+      "name": "/"
+    }
+  ],
+  "permissions": [
+    {
+      "user": "guest",
+      "vhost": "/",
+      "configure": ".*",
+      "write": ".*",
+      "read": ".*"
+    }
+  ],
+  "topic_permissions": [],
+  "parameters": [
+    {
+      "value": {
+        "ack-mode": "on-confirm",
+        "dest-add-forward-headers": false,
+        "dest-protocol": "amqp091",
+        "dest-queue": "rabbitmq-users-R9EPxqnW3N0",
+        "dest-uri": "amqps://guest:guest@localhost:5671?cacertfile=/home/lbakken/development/lukebakken/rabbitmq-users-R9EPxqnW3N0/certs/ca_certificate.pem&certfile=/home/lbakken/development/lukebakken/rabbitmq-users-R9EPxqnW3N0/certs/client_localhost_certificate.pem&keyfile=/home/lbakken/development/lukebakken/rabbitmq-users-R9EPxqnW3N0/certs/client_localhost_key.pem&verify=verify_none&fail_if_no_peer_cert=true",
+        "src-delete-after": "never",
+        "src-protocol": "amqp091",
+        "src-queue": "rabbitmq-users-R9EPxqnW3N0",
+        "src-uri": "amqps://guest:guest@localhost:5681?cacertfile=/home/lbakken/development/lukebakken/rabbitmq-users-R9EPxqnW3N0/certs/ca_certificate.pem&certfile=/home/lbakken/development/lukebakken/rabbitmq-users-R9EPxqnW3N0/certs/client_localhost_certificate.pem&keyfile=/home/lbakken/development/lukebakken/rabbitmq-users-R9EPxqnW3N0/certs/client_localhost_key.pem&verify=verify_none&fail_if_no_peer_cert=true"
+      },
+      "vhost": "/",
+      "component": "shovel",
+      "name": "rabbitmq-users-R9EPxqnW3N0"
+    }
+  ],
+  "global_parameters": [
+    {
+      "name": "cluster_name",
+      "value": "rabbit-3_7_15@shostakovich"
+    }
+  ],
+  "policies": [],
+  "queues": [],
+  "exchanges": [],
+  "bindings": []
+}

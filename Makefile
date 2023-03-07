@@ -1,4 +1,4 @@
-.PHONY: certs clean s_client-3.7 s_client-3.10
+.PHONY: certs clean s_client-3.7 s_client-3.10 tls_test
 
 certs:
 	$(MAKE) -C $(CURDIR)/tls-gen/basic CN=localhost
@@ -13,3 +13,7 @@ s_client-3.7:
 
 s_client-3.10:
 	openssl s_client -connect localhost:5671 -CAfile $(CURDIR)/certs/ca_certificate.pem -cert $(CURDIR)/certs/client_localhost_certificate.pem -key $(CURDIR)/certs/client_localhost_key.pem -verify_hostname 'localhost' -verify_depth 8
+
+tls_test:
+	erlc +debug tls_test.erl
+	erl -noinput -eval 'tls_test:start(),init:stop().'
