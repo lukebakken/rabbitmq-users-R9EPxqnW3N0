@@ -30,11 +30,11 @@
         "dest-add-forward-headers": false,
         "dest-protocol": "amqp091",
         "dest-queue": "rabbitmq-users-R9EPxqnW3N0",
-        "dest-uri": "amqps://guest:guest@localhost:5671?cacertfile=/home/lbakken/development/lukebakken/rabbitmq-users-R9EPxqnW3N0/certs/ca_certificate.pem&certfile=/home/lbakken/development/lukebakken/rabbitmq-users-R9EPxqnW3N0/certs/client_localhost_certificate.pem&keyfile=/home/lbakken/development/lukebakken/rabbitmq-users-R9EPxqnW3N0/certs/client_localhost_key.pem&verify=verify_none&fail_if_no_peer_cert=true",
+        "dest-uri": "amqps://guest:guest@localhost:5671?cacertfile=/home/lbakken/development/lukebakken/rabbitmq-users-R9EPxqnW3N0/certs/ca_certificate.pem&certfile=/home/lbakken/development/lukebakken/rabbitmq-users-R9EPxqnW3N0/certs/client_localhost_certificate.pem&keyfile=/home/lbakken/development/lukebakken/rabbitmq-users-R9EPxqnW3N0/certs/client_localhost_key.pem&verify=verify_peer&fail_if_no_peer_cert=true&server_name_indication=localhost",
         "src-delete-after": "never",
         "src-protocol": "amqp091",
         "src-queue": "rabbitmq-users-R9EPxqnW3N0",
-        "src-uri": "amqps://guest:guest@localhost:5681?cacertfile=/home/lbakken/development/lukebakken/rabbitmq-users-R9EPxqnW3N0/certs/ca_certificate.pem&certfile=/home/lbakken/development/lukebakken/rabbitmq-users-R9EPxqnW3N0/certs/client_localhost_certificate.pem&keyfile=/home/lbakken/development/lukebakken/rabbitmq-users-R9EPxqnW3N0/certs/client_localhost_key.pem&verify=verify_none&fail_if_no_peer_cert=true"
+        "src-uri": "amqps://guest:guest@localhost:5681?cacertfile=/home/lbakken/development/lukebakken/rabbitmq-users-R9EPxqnW3N0/certs/ca_certificate.pem&certfile=/home/lbakken/development/lukebakken/rabbitmq-users-R9EPxqnW3N0/certs/client_localhost_certificate.pem&keyfile=/home/lbakken/development/lukebakken/rabbitmq-users-R9EPxqnW3N0/certs/client_localhost_key.pem&verify=verify_peer&fail_if_no_peer_cert=true&server_name_indication=localhost"
       },
       "vhost": "/",
       "component": "shovel",
@@ -48,7 +48,15 @@
     }
   ],
   "policies": [],
-  "queues": [],
+  "queues": [
+    {
+      "name": "rabbitmq-users-R9EPxqnW3N0",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    }
+  ],
   "exchanges": [],
   "bindings": []
 }
