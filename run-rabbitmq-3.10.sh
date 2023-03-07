@@ -17,9 +17,9 @@ unset asdf_sh
 
 # shellcheck disable=SC2155
 readonly script_dir="$(cd "$(dirname "$0")" && pwd)"
-readonly erlang_version='22.3.4.26'
-readonly rmq_version='3.7.15'
-declare -ri rmq_node_port=5682
+readonly erlang_version='25.2.3'
+readonly rmq_version='3.10.19'
+declare -ri rmq_node_port=5672
 
 source "$script_dir/common.bash"
 
