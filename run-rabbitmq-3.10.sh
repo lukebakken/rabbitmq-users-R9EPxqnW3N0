@@ -19,6 +19,7 @@ unset asdf_sh
 readonly script_dir="$(cd "$(dirname "$0")" && pwd)"
 readonly erlang_version='25.2.3'
 readonly rmq_version='3.10.19'
+readonly rmq_nodename="rabbit-3_10_19@localhost"
 declare -ri rmq_node_port=5672
 
 source "$script_dir/common.bash"

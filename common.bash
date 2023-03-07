@@ -21,7 +21,6 @@ readonly rmq_etc_dir="$rmq_dir/etc/rabbitmq"
 readonly rmq_sbin_dir="$rmq_dir/sbin"
 readonly rmq_server="$rmq_sbin_dir/rabbitmq-server"
 readonly rmq_ctl="$rmq_sbin_dir/rabbitmqctl"
-readonly rmq_nodename="rabbit-$RANDOM@localhost"
 
 asdf shell erlang "$erlang_version" && asdf current
 
